@@ -1,0 +1,8 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteRule ^(admin|dokter|login|logout|rekam_medis|doctors)/?$ $1.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^index/?$ index.php [L,QSA]
